@@ -1,7 +1,6 @@
 package org.UAM.POO.model;
 
-public class Estudiante {
-    private Integer Id;
+public class Estudiante extends Identity{
     private String nombre;
     private String apellido;
     private Integer edad;
@@ -10,17 +9,17 @@ public class Estudiante {
     private String email;
 
     public Estudiante() {
+        super();
     }
 
-    public Estudiante(Integer Id, String nombre, Integer edad, String apellido, String direccion, Integer telefono, String email) {
+    public Estudiante(String nombre, Integer edad, String apellido, String direccion, Integer telefono, String email) {
+        super();
         this.nombre = nombre;
         this.edad = edad;
         this.apellido = apellido;
         this.direccion = direccion;
         this.telefono = telefono;
         this.email = email;
-        this.Id = Id;
-
     }
 
     public String getNombre() {
@@ -69,13 +68,5 @@ public class Estudiante {
 
     public void setDireccion(String direccion) {
         this.direccion = direccion;
-    }
-
-    public Integer getId() {
-        return Id;
-    }
-
-    public void setId(Integer id) {
-        Id = id;
     }
 }
