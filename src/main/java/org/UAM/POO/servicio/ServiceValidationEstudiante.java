@@ -20,7 +20,7 @@ public class ServiceValidationEstudiante {
         if (estudiante.getEdad() < 0) {
             throw new RegistroException("La edad debe ser mayor a 0");
         }
-        if (pattern.matcher(estudiante.getEmail()).matches()) {
+        if (!pattern.matcher(estudiante.getEmail()).matches()) {
             throw new RegistroException("El email no tiene el formato correcto");
         }
     }

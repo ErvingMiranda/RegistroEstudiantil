@@ -69,4 +69,16 @@ public class Estudiante extends Identity{
     public void setDireccion(String direccion) {
         this.direccion = direccion;
     }
+
+    @Override
+    public String toString() {
+        return "Estudiante{" +
+                "nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
+                ", edad=" + edad +
+                ", direccion='" + direccion + '\'' +
+                ", telefono=" + telefono +
+                ", email='" + email + '\'' +
+                '}';
+    }
 }
