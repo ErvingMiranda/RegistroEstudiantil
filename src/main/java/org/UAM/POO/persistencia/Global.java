@@ -1,10 +1,12 @@
-package org.UAM.POO.util;
+package org.UAM.POO.persistencia;
 
+import org.UAM.POO.model.Estudiante;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Global {
     private static Global instancia;
-    //static List<T> DB = new ArrayList<T>();
+    private static List<Estudiante> tablaEstudiante = new ArrayList<Estudiante>();
 
     private Global () {}
 
@@ -13,5 +15,9 @@ public class Global {
             instancia = new Global();
         }
         return instancia;
+    }
+
+    public List<Estudiante> getTablaEstudiante() {
+        return tablaEstudiante;
     }
 }

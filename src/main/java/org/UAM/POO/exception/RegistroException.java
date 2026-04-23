@@ -1,4 +1,7 @@
 package org.UAM.POO.exception;
 
-public class RegistroException {
+public class RegistroException extends Exception {
+    public RegistroException(String message) {
+        super(message);
+    }
 }
