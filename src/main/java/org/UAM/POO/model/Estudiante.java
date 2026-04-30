@@ -1,12 +1,14 @@
 package org.UAM.POO.model;
 
 import org.UAM.POO.anotacion.CadenaVacia;
+import org.UAM.POO.anotacion.NumeroMinimo;
 
 public class Estudiante extends Identity{
     @CadenaVacia(min = 0, message = "El nombre no puede estar vacío")
     private String nombre;
     @CadenaVacia(min = 0, message = "El apellido no puede estar vacío")
     private String apellido;
+    @NumeroMinimo(minimo = 18, message = "Solo mayores de edad")
     private Integer edad;
     @CadenaVacia(min = 0, message = "La direccion no puede ser cero")
     private String direccion;
